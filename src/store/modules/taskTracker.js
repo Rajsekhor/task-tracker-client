@@ -1,26 +1,16 @@
 import axios from "axios";
 
 const state = {
-  tasks: [
-    {
-      id: 1,
-      name: "Sleep",
-      status: "true",
-    },
-    {
-      id: 2,
-      name: "Code",
-      status: "false",
-    },
-  ],
+  tasks: [],
 };
 
 const actions = {
   async fetchTasks({commit}) {
     const response = await axios.get(
-      
+      'http://localhost:3000/todo'
     );
-      commit('setTasks',response)
+    let res=response.data.tasks
+      commit('setTasks',res)
   },
 };
 

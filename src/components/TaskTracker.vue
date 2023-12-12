@@ -1,12 +1,11 @@
-<!-- TaskTracker.vue -->
 <template>
   <div>
     <h3>Task Tracker</h3>
     <div id="tasks">
       <h4>Task Yet to be completed</h4>
-      <TaskRender :task="completedTask" type="not-completed" />
+      <TaskRender :tasks="completedTask" type="not-completed" />
       <h4>Task completed</h4>
-      <TaskRender :task="completedTask" type="completed" />
+      <TaskRender :tasks="completedTask" type="completed" />
     </div>
   </div>
 </template>
