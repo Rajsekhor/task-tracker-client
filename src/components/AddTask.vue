@@ -22,6 +22,7 @@
             onSubmit(e){
                 e.preventDefault();
                 this.addTasks(this.name)
+                this.name=''
             }
         }
     }
