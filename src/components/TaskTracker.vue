@@ -1,0 +1,39 @@
+<!-- TaskTracker.vue -->
+<template>
+  <div>
+    <h3>Task Tracker</h3>
+    <div id="tasks">
+      <h4>Task Yet to be completed</h4>
+      <TaskRender :task="completedTask" type="not-completed" />
+      <h4>Task completed</h4>
+      <TaskRender :task="completedTask" type="completed" />
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapGetters, mapActions } from 'vuex';
+import TaskRender from './TaskRender.vue';
+
+export default {
+  name: 'TaskTracker',
+  computed: {
+    ...mapGetters(['allTasks']),
+    completedTask() {
+      return this.allTasks;
+    },
+  },
+  methods:{
+    ...mapActions(['fetchTasks'])
+  },
+  mounted(){
+    this.fetchTasks()
+  },
+  components: {
+    TaskRender,
+  },
+};
+</script>
+
+<style scoped>
+</style>
