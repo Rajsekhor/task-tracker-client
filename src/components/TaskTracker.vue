@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>Task Tracker</h3>
+    <AddTask />
     <div id="tasks">
       <h4>Task Yet to be completed</h4>
       <TaskRender :tasks="completedTask" type="not-completed" />
@@ -13,6 +14,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 import TaskRender from './TaskRender.vue';
+import AddTask from './AddTask.vue';
 
 export default {
   name: 'TaskTracker',
@@ -30,6 +32,7 @@ export default {
   },
   components: {
     TaskRender,
+    AddTask
   },
 };
 </script>
