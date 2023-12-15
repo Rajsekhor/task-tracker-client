@@ -11,6 +11,7 @@ const actions = {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        withCredentials: true,
       });
       let res = response.data.tasks;
       commit("setTasks", res);
@@ -30,6 +31,7 @@ const actions = {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        withCredentials: true,
       }
     );
     let res = response.data;
@@ -44,6 +46,7 @@ const actions = {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          withCredentials: true,
         }
       );
       let res = response.data;

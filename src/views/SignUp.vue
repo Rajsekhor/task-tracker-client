@@ -41,6 +41,7 @@ export default {
       const response = await fetch("https://todolistapi-68ixc0y0u-rohan-shrivastavas-projects.vercel.app/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials:'include',
         body: JSON.stringify(data),
       });
       const responseData = await response.json();
