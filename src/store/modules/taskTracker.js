@@ -7,7 +7,7 @@ const state = {
 const actions = {
   async fetchTasks({ commit }, token) {
     try {
-      const response = await axios.get("https://todolistapi-4f9kqan7d-rohan-shrivastavas-projects.vercel.app/todo", {
+      const response = await axios.get("https://todolistapi-68ixc0y0u-rohan-shrivastavas-projects.vercel.app/todo", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -22,7 +22,7 @@ const actions = {
     console.log(token);
     console.log(name);
     const response = await axios.post(
-      "https://todolistapi-4f9kqan7d-rohan-shrivastavas-projects.vercel.app/todo",
+      "https://todolistapi-68ixc0y0u-rohan-shrivastavas-projects.vercel.app/todo",
       {
         name,
       },
@@ -38,7 +38,7 @@ const actions = {
   async updateTasks({ commit }, { taskId, token }) {
     try {
       const response = await axios.patch(
-        `https://todolistapi-4f9kqan7d-rohan-shrivastavas-projects.vercel.app/todo/${taskId}`,
+        `https://todolistapi-68ixc0y0u-rohan-shrivastavas-projects.vercel.app/todo/${taskId}`,
         {},
         {
           headers: {
