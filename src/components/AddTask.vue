@@ -20,8 +20,9 @@
         methods:{
             ...mapActions(['addTasks']),
             onSubmit(e){
+                let token = localStorage.getItem("user");
                 e.preventDefault();
-                this.addTasks(this.name)
+                this.addTasks({name:this.name,token})
                 this.name=''
             }
         }

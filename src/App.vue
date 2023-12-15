@@ -1,29 +1,22 @@
 <template>
-  <div id="main-container">
-    <TaskTracker />
-  </div>
+  <MainNavbar />
+  <router-view/>
 </template>
 
 <script>
-import TaskTracker from './components/TaskTracker.vue';
-
-export default {
-  name: 'App',
-  components: {
-    TaskTracker
-  }
+  import MainNavbar from './components/MainNavbar.vue';
+  export default{
+    components: { MainNavbar }
 }
 </script>
 
 <style>
-  body{
-    margin:0;
-    padding:0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  #main-container{
-    height: auto;
-    width:100%;
-    display: flex;
-  }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
 </style>
