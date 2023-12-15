@@ -26,7 +26,7 @@ export default {
     const status = computed(() => store.getters["auth/isAuthenticated"]);
 
     const submit = async () => {
-      const response = await fetch("https://todolistapi-68ixc0y0u-rohan-shrivastavas-projects.vercel.app/auth/login", {
+      const response = await fetch("https://todolist-7sx5cpg35-rohan-shrivastavas-projects.vercel.app/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials:'include',
