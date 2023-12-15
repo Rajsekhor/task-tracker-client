@@ -7,7 +7,7 @@ const state = {
 const actions = {
   async fetchTasks({ commit }, token) {
     try {
-      const response = await axios.get("https://todolist-7sx5cpg35-rohan-shrivastavas-projects.vercel.app/todo", {
+      const response = await axios.get("https://www.nesjs-todolist-5qem199bu-rohan-shrivastavas-projects.vercel.app/todo", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -23,7 +23,7 @@ const actions = {
     console.log(token);
     console.log(name);
     const response = await axios.post(
-      "https://todolist-7sx5cpg35-rohan-shrivastavas-projects.vercel.app/todo",
+      "https://www.nesjs-todolist-5qem199bu-rohan-shrivastavas-projects.vercel.app/todo",
       {
         name,
       },
@@ -40,7 +40,7 @@ const actions = {
   async updateTasks({ commit }, { taskId, token }) {
     try {
       const response = await axios.patch(
-        `https://todolist-7sx5cpg35-rohan-shrivastavas-projects.vercel.app/todo/${taskId}`,
+        `https://www.nesjs-todolist-5qem199bu-rohan-shrivastavas-projects.vercel.app/todo/${taskId}`,
         {},
         {
           headers: {
