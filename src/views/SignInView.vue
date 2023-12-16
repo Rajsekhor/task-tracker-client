@@ -26,7 +26,7 @@ export default {
     const status = computed(() => store.getters["auth/isAuthenticated"]);
 
     const submit = async () => {
-      const response = await fetch("https://www.nesjs-todolist-5qem199bu-rohan-shrivastavas-projects.vercel.app/auth/login", {
+      const response = await fetch("http://54.237.232.251:3000/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials:'include',
