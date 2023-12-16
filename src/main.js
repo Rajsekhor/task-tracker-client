@@ -1,4 +1,4 @@
-import {createApp} from 'vue';
+const { createApp } = require('vue');
 import App from './App.vue';
 import store from './store';  // Make sure this path is correct
 import router from './router'
