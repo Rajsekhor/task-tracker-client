@@ -7,7 +7,7 @@ const state = {
 const actions = {
   async fetchTasks({ commit }, token) {
     try {
-      const response = await axios.get("http://54.237.232.251:3000/todo", {
+      const response = await axios.get("http://50.17.81.170:3000/todo", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -23,7 +23,7 @@ const actions = {
     console.log(token);
     console.log(name);
     const response = await axios.post(
-      "http://54.237.232.251:3000/todo",
+      "http://50.17.81.170:3000/todo",
       {
         name,
       },
@@ -40,7 +40,7 @@ const actions = {
   async updateTasks({ commit }, { taskId, token }) {
     try {
       const response = await axios.patch(
-        `http://54.237.232.251:3000/todo/${taskId}`,
+        `http://50.17.81.170:3000/todo/${taskId}`,
         {},
         {
           headers: {
