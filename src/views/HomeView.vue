@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="task-tracker-container">
     <h3>Task Tracker</h3>
     <AddTask v-if="isAuthenticated" />
     <div id="tasks" v-if="isAuthenticated">
@@ -9,7 +9,7 @@
       <TaskRender :tasks="completedTask" type="completed" />
     </div>
     <div v-else>
-      You are not logged In
+      <p class="not-logged-in-message">You are not logged in</p>
     </div>
   </div>
 </template>
@@ -29,13 +29,6 @@ export default {
     completedTask() {
       return this.allTasks;
     },
-    // checkuser(){
-    //   let token = localStorage.getItem("user");
-    //   if(token!=null)
-    //     return true
-    //   else  
-    //     return false
-    // }
   },
   methods: {
   ...mapActions('auth', ['login']),
@@ -63,4 +56,37 @@ mounted() {
 </script>
 
 <style scoped>
+
+.task-tracker-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+h3 {
+  color: #333;
+}
+
+#tasks {
+  margin-top: 20px;
+}
+
+h4 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Style for the "You are not logged in" message */
+.not-logged-in-message {
+  color: #ff6347; /* Tomato color */
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
 </style>

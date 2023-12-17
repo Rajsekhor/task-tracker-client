@@ -20,8 +20,6 @@ const actions = {
     }
   },
   async addTasks({ commit }, {name, token}) {
-    console.log(token);
-    console.log(name);
     const response = await axios.post(
       "http://65.2.81.108:3000/todo",
       {

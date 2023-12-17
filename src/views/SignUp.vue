@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="signup-container">
     <h3>Sign Up</h3>
     <form @submit.prevent="submit">
       <input v-model="data.name" type="text" placeholder="username" required />
@@ -65,4 +65,46 @@ export default {
 </script>
 
 
-<style scoped></style>
+<style scoped>
+
+.signup-container {
+  max-width: 400px;
+  margin: 15dvh auto 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+</style>

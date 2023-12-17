@@ -43,4 +43,18 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.completed-task {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #f5f5f5; /* Light gray on hover */
+  }
+}
+
+</style>
