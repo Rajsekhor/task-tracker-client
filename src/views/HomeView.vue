@@ -1,6 +1,6 @@
 <template>
   <div class="task-tracker-container">
-    <h3>Task Tracker</h3>
+    <h1>Task Tracker</h1>
     <AddTask v-if="isAuthenticated" />
     <div id="tasks" v-if="isAuthenticated">
       <h4>Task Yet to be completed</h4>
@@ -61,15 +61,14 @@ mounted() {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
-  /* border: 1px solid #ddd; */
-  border-radius: 5px;
-  
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  border: 1px solid #A7BC5B;
+  box-shadow: 0 0 16px 10px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
-  color: #333;
+  color: #A7BC5B;
 }
 
 #tasks {
@@ -83,9 +82,10 @@ h4 {
 
 /* Style for the "You are not logged in" message */
 .not-logged-in-message {
-  color: #ff6347; /* Tomato color */
+  color: #ff6347;
   font-size: 18px;
   margin-top: 20px;
+  font-weight: bold;
 }
 
 

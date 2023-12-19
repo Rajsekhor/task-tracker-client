@@ -1,6 +1,6 @@
 <template>
   <nav class="main-navbar">
-    <router-link to="/">Home</router-link>
+    <router-link to="/">Task Tracker</router-link>
     <div>
       <router-link v-if="!isAuthenticated" to="/signin">Sign In</router-link>
       <router-link v-if="!isAuthenticated" to="/signup">Sign Up</router-link>
@@ -28,24 +28,27 @@ export default {
 
 <style scoped>
 nav.main-navbar {
-  width: 100%;
+  height: auto;
+  width: calc(100%-50px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #3498db; /* Primary color for the background */
-  padding: 10px;
-  color: #fff; /* Text color */
+  background-color: #fff; /* Primary color for the background */
+  color: #545e2a; /* Text color */
 }
 
 nav.main-navbar a {
+  font-weight: bold;
+  padding: 25px;
   text-decoration: none;
-  color: #fff; /* Text color for links */
-  margin-right: 15px;
+  color: #545e2a; /* Text color for links */
+  transition: all 0.3s ease-in-out;
 }
 
 nav.main-navbar a:hover {
-  text-decoration: underline; /* Underline on hover for links */
-  color: #f5f5f5; /* Lighter color on hover */
+  color: #f5f5f5;
+  background-color: #8DA242;
+;
 }
 
 nav.main-navbar div {

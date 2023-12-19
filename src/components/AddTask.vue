@@ -40,25 +40,31 @@
 .add-task-form {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .add-task-form input {
   padding: 8px;
   margin-bottom: 10px;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #A7BC5B;
 }
 
 .add-task-form button {
-  background-color: #3498db;
+  background-color: #A7BC5B;
   color: #fff;
   padding: 10px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
 }
 
 .add-task-form button:hover {
-  background-color: #2980b9;
+  background-color: #8DA242;
 }
 </style>
